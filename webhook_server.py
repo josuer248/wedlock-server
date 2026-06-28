@@ -2,7 +2,7 @@ import os
 from flask import Flask, request
 import requests
 
-app = Flask(name)
+app = Flask(__name__)
 
 TELEGRAM_BOT_TOKEN = "8970384040:AAGPz9UKpVj7A2z9Gmc___GqmR848bc5Z40"
 TELEGRAM_CHAT_ID = "-100430144920"
@@ -19,5 +19,46 @@ def webhook():
     send_telegram("TradingView Alert: " + message)
     return "OK", 200
 
-if name == "main":
+if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
